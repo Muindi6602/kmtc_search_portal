@@ -73,6 +73,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Author**: Joseph Muindi
 - **Email**: mutuajosephmuindi@gmail.com
 - **GitHub**: [https://github.com/Muindi6602](https://github.com/Muindi6602)
-
-Feel free to open issues or submit pull requests for any improvements or bugs.
-```
