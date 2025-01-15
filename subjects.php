@@ -64,7 +64,7 @@
 </head>
 <body>
     <div>
-        <form id="subjectForm" method="POST" action="select_grades.php">
+        <form id="subjectForm" method="POST" action="select_grades">
             <h3>Select your Kcse subjects</h3>
             <?php
             $subjects = ["Math", "English", "Kiswahili", "Biology", "Chemistry", "Physics", "CRE", "IRE", "Geography", "History", "Agriculture", "Business", "Computer Studies", "Home Science"];
