@@ -95,10 +95,10 @@
 <body>
     <h2><strong>Welcome to KMTC Search Portal</strong></h2>
     <h3>Your ultimate companion for finding Kmtc courses tailored to your grades</h3>
-    <a href="subjects.php" class="get-started">Get Started</a>
+    <a href="subjects" class="get-started">Get Started</a>
     <div class="reasons">
         <h2>Why this portal?</h2>
-        <p>This portal is designed to help students efficiently identify all the kmtc courses they have qualified by there Kcse grades.</p>
+        <p>This portal is designed to help students efficiently identify all the kmtc courses they have qualified by their Kcse grades.</p>
         <p>Designed with passion by <strong><a href="https://wa.me/254115783375" target="_blank" class="no-underline">Joseph Muindi</a></strong> and <strong><a href="https://wa.me/254746193590" target="_blank" class="no-underline">David Ndeleva</a></strong>.</p>
 
 <style>
