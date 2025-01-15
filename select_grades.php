@@ -16,7 +16,7 @@ $selectedSubjects = $_POST['subjects'];
 </head>
 <body>
     <h1>Select Grades for Your Subjects</h1>
-    <form method="POST" action="process.php">
+    <form method="POST" action="process">
         <?php
         foreach ($selectedSubjects as $subject) {
             echo "<label>$subject:</label>
