@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $subject4_grade = $_POST['subject4_grade'];
 
     // Insert into the database
-    $sql = "INSERT INTO courses (programme_code, campus, programme_name, mean_grade, subject1, subject1_grade, subject2, subject2_grade, subject3, subject3_grade, subject4, subject4_grade)
+    $sql = "INSERT INTO kcourses (programme_code, campus, programme_name, mean_grade, subject1, subject1_grade, subject2, subject2_grade, subject3, subject3_grade, subject4, subject4_grade)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param(
@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // Fetch all courses to display in the table
-$sql = "SELECT * FROM courses";
+$sql = "SELECT * FROM kcourses";
 $result = $conn->query($sql);
 ?>
 
