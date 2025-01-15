@@ -4,9 +4,9 @@ require 'config.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $grades = $_POST['grades'];
     $mean_grade = $_POST['mean_grade'];
-    $results = "<table border='1'><tr><th>Programme Code</th><th>Campus</th><th>Programme Name</th></tr>";
+    $results = "<table border='1'><tr><th>Course</th><th>Campus</th><th>Code</th></tr>";
 
-    $sql = "SELECT * FROM courses WHERE mean_grade <= ?";
+    $sql = "SELECT * FROM kcourses WHERE mean_grade <= ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $mean_grade);
     $stmt->execute();
@@ -42,9 +42,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         if ($valid) {
             $results .= "<tr>
-                <td>{$course['programme_code']}</td>
-                <td>{$course['campus']}</td>
-                <td>{$course['programme_name']}</td>
+                <td><strong style='color: #007BFF; font-size: small;'>{$course['programme_name']}</strong></td>
+                <td><strong style='color: black; font-size: small;'>{$course['campus']}</strong></td>
+                <td><strong style='color: black; font-size: small;'>{$course['programme_code']}</strong></td>
+
             </tr>";
         }
     }
@@ -135,7 +136,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             const rows = document.querySelectorAll("table tr");
             rows.forEach((row, index) => {
                 if (index === 0) return; // Skip header row
-                const programmeName = row.cells[2]?.textContent.toLowerCase();
+                const programmeName = row.cells[0]?.textContent.toLowerCase();
                 if (type === 'diploma' && !programmeName?.startsWith('diploma')) {
                     row.style.display = 'none';
                 } else if (type === 'certificate' && !programmeName?.startsWith('certificate')) {
